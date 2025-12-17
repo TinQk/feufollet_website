@@ -1,0 +1,24 @@
+/* ---------- VARIABLES ---------- */
+:root {
+  /* Espacements */
+  --scale: 0.5; /* maquette deux fois plus grande que la realité */
+  --spacing-small: calc(30px * var(--scale)); /* 15px */
+  --spacing-med: calc(60px * var(--scale)); /* 30px */
+  --spacing-large: calc(120px * var(--scale)); /* 60px */
+
+  /* Polices */
+  --font-display: "Basteleur", system-ui, sans-serif;
+  --font-body: Arial, system-ui, sans-serif;
+
+  /* Couleurs Placeholder */
+  --color-bg: #ffffff;
+  --color-noir: #111111;
+  --color-vert: #55af7f; /* vert menu */
+  --color-eau: #c5ece1;
+  --color-lilas: #c2b7d8;
+  --color-rouge: #e75630;
+  --color-rose: #ecb1b6;
+  --color-bleu: #74a8c7;
+  --color-jaune: #feec62;
+  --color-beige: #fff7ee;
+}

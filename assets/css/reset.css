@@ -1,0 +1,40 @@
+/* assets/css/reset.css */
+
+/* 1. Modèle de boîte cohérent */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Suppression des marges par défaut */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Comportement sain du body */
+body {
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 4. Images propres */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 5. Polices héritées dans les formulaires */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 6. Liens sans déco par défaut */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 7. Listes neutres */
+ul, ol {
+  list-style: none;
+}
