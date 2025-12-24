@@ -442,3 +442,11 @@ button,
     padding-right: 10vw;
   }
 }
+
+/* =========================
+              ACTUS
+   ========================= */
+
+.news-intro {
+  background-color: var(--color-lilas);
+}

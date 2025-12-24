@@ -1,4 +1,4 @@
-// 1. Liste des projets (une seule source de vérité)
+// 1a. Liste des projets (une seule source de vérité)
 const PROJECTS = [
   {
     id: "projet-1",
@@ -57,7 +57,58 @@ const PROJECTS = [
   // ... ajoute ici tes autres projets
 ];
 
-// 2. Template d’une vignette projet
+// 1b. Liste des actus (une seule source de vérité)
+const NEWS = [
+  {
+    id: "actu-1",
+    title: "Ecriture d’un article pour la revue ERE",
+    date: "2025-01-16", // sert à trier les plus récents
+    image: "/assets/img/project_card/kit-enquete.jpg",
+    imageAlt: "", // s'affiche si l'image ne parvient pas a charger
+    excerpt: "05/12/2025 :  Regard sur un an de travail collaboratif avec Emilie Kohlmann et 15 enseignants en Info-Comm à l’IUT 2 de Grenoble. Un article à six mains sera soumis à la revue québécoise début 2026 !",
+    url: ""
+  },
+  {
+    id: "actu-2",
+    title: "Scientifiction au Quai Des Savoirs",
+    date: "2025-01-16", // sert à trier les plus récents
+    image: "/assets/img/project_card/kit-enquete.jpg",
+    imageAlt: "", // s'affiche si l'image ne parvient pas a charger
+    excerpt: "05/11/2025 : On anime notre atelier Scientifiction au Quai des Savoirs à Toulouse lors du Forum des Futurs Désirables : collages, discussions collectives et exploration de nos avenirs communs.",
+    url: ""
+  },
+  {
+    id: "actu-3",
+    title: "Enquête en Kit est sur l’ADEM",
+    date: "2025-01-16", // sert à trier les plus récents
+    image: "/assets/img/project_card/kit-enquete.jpg",
+    imageAlt: "", // s'affiche si l'image ne parvient pas a charger
+    excerpt: "La mallette pédagogique Enquête en Kit co-créé dans le cadre du projet RenfoRSE est visible et disponible sur le site de l’ADEM sous licence creative commons.",
+    url: ""
+  },
+  {
+    id: "actu-4",
+    title: "Dessiner la ville et la campagne",
+    date: "2025-01-16", // sert à trier les plus récents
+    image: "/assets/img/project_card/kit-enquete.jpg",
+    imageAlt: "", // s'affiche si l'image ne parvient pas a charger
+    excerpt: "Dessiner la ville et la campagne : paysages, animaux et bâtiments… Feu Follet, ce sont deux designers et artistes qui musclent régulièrement leurs crayons en créant leur propre résidence de dessin à Dijon",
+    url: ""
+  },
+  {
+    id: "actu-5",
+    title: "Socialter parle de nous",
+    date: "2025-01-16", // sert à trier les plus récents
+    image: "/assets/img/project_card/kit-enquete.jpg",
+    imageAlt: "", // s'affiche si l'image ne parvient pas a charger
+    excerpt: "30/08/2025 : Le magazine de critique radicale et alternative Socialter parle de Feu Follet dans son numéro 71: \"La science-fiction fait sa révolution\" !",
+    url: ""
+  },
+    // ... ajoute ici tes autres actus
+];
+
+
+// 2. Template d’une vignette projet/actu
 function createProjectCardHTML(project) {
   return `
     <article class="project-card">
@@ -108,8 +159,39 @@ function renderLatestProjects(limit = 3) {
   });
 }
 
+// 3c. Remplir la page d'accueil (X derniers actus)
+function renderLatestNews(limit = 3) {
+    const container = document.getElementById("latest-news");
+    if (!container) return; // on n'est pas sur la home
+    const sorted = [...NEWS].sort(
+        (a, b) => new Date(b.date) - new Date(a.date)
+    );
+    const latest = sorted.slice(0, limit);
+
+    latest.forEach(actu => {
+        container.insertAdjacentHTML("beforeend", createProjectCardHTML(actu));
+});
+}
+
+// 3d. Remplir la page "Nos actus" (toutes les actus)
+function renderAllNews() {
+    const container = document.getElementById("all-news");
+    if (!container) return; // on n'est pas sur la page actus
+
+    // On peut trier du plus récent au plus ancien
+    const sorted = [...NEWS].sort(
+        (a, b) => new Date(b.date) - new Date(a.date)
+    );
+
+    sorted.forEach(actu => {
+        container.insertAdjacentHTML("beforeend", createProjectCardHTML(actu));
+    });
+}
+
 // 4. Lancer tout ça quand le DOM est prêt
 document.addEventListener("DOMContentLoaded", () => {
   renderAllProjects();
   renderLatestProjects(3); // par ex. 3 derniers projets
+  renderLatestNews(3); // par ex. 3 derniers actus
+  renderAllNews();
 });
