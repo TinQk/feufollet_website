@@ -436,7 +436,7 @@ button,
     gap: var(--spacing-small);
   }
 
-  .projects {
+  .projects, .latest-projects {
     width: 100%;
     padding-left: 10vw;
     padding-right: 10vw;
