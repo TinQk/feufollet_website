@@ -58,9 +58,17 @@ body {
   margin: 0;
   padding: 0;
   color: var(--color-noir);
+  background-color: var(--color-beige);
 }
 
-/* Hero, titres */
+.type-hero {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.1;
+}
+
+/* titres */
 .type-title {
   font-family: var(--font-display);
   font-weight: 700;
@@ -106,6 +114,21 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+
+/* =========================
+   UTILITAIRES
+   ========================= */
+
+.spacing-small {
+  height: var(--spacing-small);
+}
+
+/* container qui centre le contenu */
+.container {
+  display: flex;
+  justify-content: center;
 }
 
 /* =========================
@@ -191,6 +214,10 @@ button,
 .mobile-menu a {
   padding-top: 8px;
   width: 100%;
+}
+
+.header-room {
+  height: 95px; /* pour laisser de la place au header en position absolue: 15 + 50 + 30 */
 }
 
 /* Couleurs différentes par item (placeholder) */
@@ -356,4 +383,62 @@ button,
   padding: var(--spacing-small);
   text-align: center;
   background-color: var(--color-vert);
+}
+
+/* =========================
+          PROJECTS
+   ========================= */
+
+.latest-projects, .projects {
+  padding-left: var(--spacing-small);
+  padding-right: var(--spacing-small);
+  padding-top: var(--spacing-med);
+  padding-bottom: var(--spacing-med);
+  width: min(100%, 480px);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: var(--spacing-med);
+}
+
+.project-card {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  outline: 2px dashed rgba(255, 0, 0, 0.6);
+  outline-offset: 0;
+}
+
+.project-card-textzone {
+  margin-top: var(--spacing-small);
+  height: 7lh;
+}
+
+.project-card-image {
+  width: 100%;
+  height: auto;
+}
+
+.projects-intro {
+  background-color: var(--color-eau);
+}
+
+/* ---------- PROJECTS DESKTOP ---------- */
+
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--spacing-small);
+  }
+
+  .projects {
+    width: 100%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
 }
