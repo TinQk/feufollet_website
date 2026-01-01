@@ -125,11 +125,19 @@ body {
   height: var(--spacing-small);
 }
 
+.spacing-med {
+  height: var(--spacing-med);
+}
+
+.spacing-large {
+  height: var(--spacing-large);
+}
+
 /* container qui centre le contenu et met les éléments les uns en dessous des autres */
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /*justify-content: center;*/
   align-items: center;
 }
 
@@ -446,9 +454,93 @@ button,
 }
 
 /* =========================
-              ACTUS
+        INTROS COLORS 
    ========================= */
 
 .news-intro {
   background-color: var(--color-lilas);
+}
+
+.actions-intro {
+  background-color: var(--color-vert);
+}
+
+/* =========================
+        DOMAINES ACTION
+   ========================= */
+
+
+.container-chapeau {
+  padding-left: var(--spacing-small);
+  padding-right: var(--spacing-small);
+  padding-top: var(--spacing-med);
+  padding-bottom: var(--spacing-med);
+  width: min(100%, 480px);
+}
+
+@media (min-width: 1024px) {
+  .container-chapeau, .container-actions {
+    width: 100%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+}
+
+
+/* ---------- ACCORDION ---------- */
+
+.accordion {
+  background-color: var(--color-jaune);
+  padding-left: var(--spacing-small);
+  padding-right: var(--spacing-small);
+  padding-top: var(--spacing-small);
+  padding-bottom: var(--spacing-small);
+}
+
+.accordion__summary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* titre à gauche, icône à droite */
+  position: relative;
+  padding: 12px;          /* agrandit la zone cliquable */
+  margin: -12px;         /* annule l’impact visuel */
+}
+
+/* enlève le marqueur/triangle natif */
+.accordion__summary::-webkit-details-marker {
+  display: none;
+}
+.accordion__summary::marker {
+  content: "";
+}
+
+.accordion[open] .accordion__icon {
+  transform: rotate(180deg);
+}
+
+.accordion__icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+  margin-left: var(--spacing-small);
+}
+
+/* accordion panel */
+.accordion__panel {
+  margin-top: var(--spacing-small);
+}
+
+/* barre noire sous chaque accordion */
+.accordion {
+  position: relative; /* permet de positionner la barre */
+}
+.accordion::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--color-noir); /* ta barre noire */
 }
