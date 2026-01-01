@@ -125,10 +125,12 @@ body {
   height: var(--spacing-small);
 }
 
-/* container qui centre le contenu */
+/* container qui centre le contenu et met les éléments les uns en dessous des autres */
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 /* =========================
