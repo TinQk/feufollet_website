@@ -10,6 +10,7 @@ async function includeComponent(selector, file) {
 document.addEventListener("DOMContentLoaded", () => {
   includeComponent("header", "/components/header.html");
   includeComponent("footer", "/components/footer.html");
+  includeComponent(".cta-slot", "/components/cta.html");
 
   // Gestion du menu mobile après insertion
   document.addEventListener("click", (e) => {

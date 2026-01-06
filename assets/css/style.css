@@ -544,3 +544,25 @@ button,
   height: 2px;
   background: var(--color-noir); /* ta barre noire */
 }
+
+
+/* ===============================
+   CTA – Call To Action
+================================ */
+
+.cta {
+  width: 100%;
+  background: var(--color-vert); /* couleur placeholder */
+  padding: var(--spacing-med) var(--spacing-small);
+  display: flex;
+  flex-direction: column;
+}
+
+.cta_link {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: var(--color-eau);
+  text-decoration: underline;
+}
