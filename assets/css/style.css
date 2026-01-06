@@ -8,6 +8,7 @@
   --spacing-small: calc(30px * var(--scale)); /* 15px */
   --spacing-med: calc(60px * var(--scale)); /* 30px */
   --spacing-large: calc(120px * var(--scale)); /* 60px */
+  --page-gutter: 10vw; /* marge horizontale des pages desktop */
 
   /* Polices */
   --font-display: "Basteleur", system-ui, sans-serif;
@@ -24,6 +25,40 @@
   --color-bleu: #74a8c7;
   --color-jaune: #feec62;
   --color-beige: #fff7ee;
+}
+
+/* =========================
+   UTILITAIRES
+   ========================= */
+
+.spacing-small {
+  height: var(--spacing-small);
+}
+
+.spacing-med {
+  height: var(--spacing-med);
+}
+
+.spacing-large {
+  height: var(--spacing-large);
+}
+
+/* container qui centre le contenu et met les éléments les uns en dessous des autres */
+.container {
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+  align-items: center;
+}
+
+.gutter-desktop {
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+}
+
+.margins-small-lr {
+  margin-left: var(--spacing-small);
+  margin-right: var(--spacing-small);
 }
 
 /* ===============================
@@ -114,31 +149,6 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-}
-
-
-/* =========================
-   UTILITAIRES
-   ========================= */
-
-.spacing-small {
-  height: var(--spacing-small);
-}
-
-.spacing-med {
-  height: var(--spacing-med);
-}
-
-.spacing-large {
-  height: var(--spacing-large);
-}
-
-/* container qui centre le contenu et met les éléments les uns en dessous des autres */
-.container {
-  display: flex;
-  flex-direction: column;
-  /*justify-content: center;*/
-  align-items: center;
 }
 
 /* =========================
@@ -351,7 +361,7 @@ button,
 /* ---------- HERO MOBILE ---------- */
 .hero {
   width: 100%;
-  height: 85vh; /* 70% de la hauteur de la fenêtre */
+  height: 85vh;
 
   background-image: url("/assets/img/hero.jpg");
   background-size: cover; /* l’image remplit tout */
@@ -373,16 +383,8 @@ button,
 }
 
 .hero-text {
-  padding: 8vh;
-  text-align: center;
+  text-align: center; /* centre le texte si retour a la ligne */
   z-index: 2; /* au-dessus du overlay */
-}
-
-/* ---------- HERO DESKTOP ---------- */
-@media (min-width: 1024px) {
-  .hero-text {
-    padding: 70vh;
-  }
 }
 
 /* =========================
@@ -399,7 +401,8 @@ button,
           PROJECTS
    ========================= */
 
-.latest-projects, .projects {
+.latest-projects,
+.projects {
   padding-left: var(--spacing-small);
   padding-right: var(--spacing-small);
   padding-top: var(--spacing-med);
@@ -410,23 +413,18 @@ button,
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
-  justify-items: center;
   gap: var(--spacing-med);
 }
 
 .project-card {
+  width: min(100%, 480px);
   text-align: left;
   display: flex;
   flex-direction: column;
-  height: 100%;
-
-  outline: 2px dashed rgba(255, 0, 0, 0.6);
-  outline-offset: 0;
 }
 
 .project-card-textzone {
   margin-top: var(--spacing-small);
-  height: 7lh;
 }
 
 .project-card-image {
@@ -444,9 +442,11 @@ button,
   .projects-grid {
     grid-template-columns: 1fr 1fr 1fr;
     gap: var(--spacing-small);
+    grid-auto-rows: 1fr; /* <-- makes cards in same row the same height */
   }
 
-  .projects, .latest-projects {
+  .projects,
+  .latest-projects {
     width: 100%;
     padding-left: 10vw;
     padding-right: 10vw;
@@ -469,7 +469,6 @@ button,
         DOMAINES ACTION
    ========================= */
 
-
 .container-chapeau {
   padding-left: var(--spacing-small);
   padding-right: var(--spacing-small);
@@ -479,13 +478,13 @@ button,
 }
 
 @media (min-width: 1024px) {
-  .container-chapeau, .container-actions {
+  .container-chapeau,
+  .container-actions {
     width: 100%;
     padding-left: 10vw;
     padding-right: 10vw;
   }
 }
-
 
 /* ---------- ACCORDION ---------- */
 
@@ -503,8 +502,8 @@ button,
   align-items: center;
   justify-content: space-between; /* titre à gauche, icône à droite */
   position: relative;
-  padding: 12px;          /* agrandit la zone cliquable */
-  margin: -12px;         /* annule l’impact visuel */
+  padding: 12px; /* agrandit la zone cliquable */
+  margin: -12px; /* annule l’impact visuel */
 }
 
 /* enlève le marqueur/triangle natif */
@@ -544,7 +543,6 @@ button,
   height: 2px;
   background: var(--color-noir); /* ta barre noire */
 }
-
 
 /* ===============================
    CTA – Call To Action
