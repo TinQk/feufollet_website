@@ -229,7 +229,7 @@ button,
 
 /* Chaque item = rectangle de la largeur du contenu, hauteur = hauteur bouton */
 .mobile-menu li {
-  height: 50px;
+  min-height: 50px;
   padding-left: var(--spacing-small);
   display: flex;
   align-items: center;
@@ -286,6 +286,7 @@ button,
 
   .header-inner {
     flex: 0 0 auto; /* le titre prend juste sa place, evite des problemes */
+    margin-right: var(--spacing-small);
   }
 
   /* Le menu passe dans le flux normal */
@@ -298,12 +299,11 @@ button,
 
   .mobile-menu ul {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: var(--spacing-small);
   }
 
   .mobile-menu li {
-    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -312,6 +312,9 @@ button,
 
   .mobile-menu a {
     padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
     padding-top: 6px;
   }
 }
