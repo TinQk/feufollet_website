@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Enquête en Kit",
+    "date": "2025-01-16",
+    "image": "/assets/img/project_card/kit-enquete.jpg",
+    "imageAlt": "",
+    "excerpt": "Accompagner des enseignants en IUT à intégrer les enjeux de justice sociale et environnementale dans leurs cours par le biais des RSE-O :  pédagogies actives, sorties nature et enquêtes  … >>",
+    "url": "/projets/enquete-en-kit.html"
+  },
+  {
+    "title": "Scientifiction",
+    "date": "2025-01-15",
+    "image": "/assets/img/project_card/scientifiction.jpg",
+    "imageAlt": "",
+    "excerpt": "Scientifiction, un atelier de design fiction qui mêle création et débat, pour penser le partage de savoirs scientifique de demain",
+    "url": "/projets/scientifiction.html"
+  },
+  {
+    "title": "Lille 2055 : Incertitude Radicale Extrême",
+    "date": "2025-01-14",
+    "image": "/assets/img/project_card/lille-2055.jpg",
+    "imageAlt": "",
+    "excerpt": "Imaginer en une semaine un futur possible pour les Hauts-de-France en 2055 : scientifiques, auteur.ices de science-fiction et dessinateurs de BD explorent le scénario 8.5 du GIEC.",
+    "url": "/projets/lille-2055.html"
+  },
+  {
+    "title": "Tête-en-l'air",
+    "date": "2025-01-14",
+    "image": "/assets/img/project_card/tete-en-lair.jpg",
+    "imageAlt": "",
+    "excerpt": "Lancé de cerfs-volants artisanaux et porteur de paroles dans l'espace public pour réfléchir collectivement à notre manière d'habiter le dehors. Une résidence autogérée à Toulouse, avec la designer Eléonore Le Nezet.",
+    "url": "/projets/tete-en-lair.html"
+  },
+  {
+    "title": "Des Noeuds et des Liens",
+    "date": "2025-01-14",
+    "image": "/assets/img/project_card/des-noeuds.jpg",
+    "imageAlt": "",
+    "excerpt": "Explorer les tensions écologiques et sociales à travers le thème de l'agriculture : un atelier pour analyser des médias et mettre en scène des personnages aux opinions contrastées…",
+    "url": "/projets/des-noeuds-et-des-liens.html"
+  },
+  {
+    "title": "Plan Climat Air Energie",
+    "date": "2025-01-14",
+    "image": "/assets/img/project_card/pcaet.jpg",
+    "imageAlt": "",
+    "excerpt": "Conception et animation d'une session de concertation territoriale sur la mise en œuvre d'un PCAET, avec la communauté de communes de Comtal-Lot et Truyère, Aveyron, 2025.",
+    "url": "/projets/plan-climat-air-energie.html"
+  }
+]

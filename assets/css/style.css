@@ -8,7 +8,7 @@
   --spacing-small: calc(30px * var(--scale)); /* 15px */
   --spacing-med: calc(60px * var(--scale)); /* 30px */
   --spacing-large: calc(120px * var(--scale)); /* 60px */
-  --gutter: 10vw; /* marge horizontale des pages desktop */
+  --gutter: 10vw; /* marge horizontale des pages avec les cartes projets */
 
   /* Polices */
   --font-display: "Basteleur", system-ui, sans-serif;
@@ -47,8 +47,12 @@
 .container {
   display: flex;
   flex-direction: column;
-  /*justify-content: center;*/
   align-items: center;
+}
+
+.container-article {
+  display: flex;
+  flex-direction: column;
 }
 
 .gutter {
@@ -63,6 +67,12 @@
 
 .max-width-800px {
   max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.max-width-1200px {
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -105,7 +115,7 @@ body {
 .type-hero {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   line-height: 1.1;
 }
 
@@ -113,7 +123,7 @@ body {
 .type-title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   line-height: 1.1;
 }
 
@@ -123,6 +133,9 @@ body {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 1.2;
+  margin-bottom: calc(
+    var(--spacing-small) / 2
+  ); /* espace ajouté après les sous-titres */
 }
 
 /* Texte courant */
@@ -243,7 +256,7 @@ button,
 }
 
 .header-room {
-  height: 95px; /* pour laisser de la place au header en position absolue: 15 + 50 + 30 */
+  height: 110px; /* pour laisser de la place au header en position absolue: 15 + 50 + 30 */
 }
 
 /* Couleurs différentes par item (placeholder) */

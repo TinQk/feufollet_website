@@ -1,0 +1,47 @@
+[
+  {
+    "id": "actu-1",
+    "title": "Ecriture d'un article pour la revue ERE",
+    "date": "2025-01-16",
+    "image": "/assets/img/project_card/kit-enquete.jpg",
+    "imageAlt": "",
+    "excerpt": "05/12/2025 :  Regard sur un an de travail collaboratif avec Emilie Kohlmann et 15 enseignants en Info-Comm à l'IUT 2 de Grenoble. Un article à six mains sera soumis à la revue québécoise début 2026 !",
+    "url": ""
+  },
+  {
+    "id": "actu-2",
+    "title": "Scientifiction au Quai Des Savoirs",
+    "date": "2025-01-16",
+    "image": "/assets/img/project_card/kit-enquete.jpg",
+    "imageAlt": "",
+    "excerpt": "05/11/2025 : On anime notre atelier Scientifiction au Quai des Savoirs à Toulouse lors du Forum des Futurs Désirables : collages, discussions collectives et exploration de nos avenirs communs.",
+    "url": ""
+  },
+  {
+    "id": "actu-3",
+    "title": "Enquête en Kit est sur l'ADEM",
+    "date": "2025-01-16",
+    "image": "/assets/img/project_card/kit-enquete.jpg",
+    "imageAlt": "",
+    "excerpt": "La mallette pédagogique Enquête en Kit co-créé dans le cadre du projet RenfoRSE est visible et disponible sur le site de l'ADEM sous licence creative commons.",
+    "url": ""
+  },
+  {
+    "id": "actu-4",
+    "title": "Dessiner la ville et la campagne",
+    "date": "2025-01-16",
+    "image": "/assets/img/project_card/kit-enquete.jpg",
+    "imageAlt": "",
+    "excerpt": "Dessiner la ville et la campagne : paysages, animaux et bâtiments… Feu Follet, ce sont deux designers et artistes qui musclent régulièrement leurs crayons en créant leur propre résidence de dessin à Dijon",
+    "url": ""
+  },
+  {
+    "id": "actu-5",
+    "title": "Socialter parle de nous",
+    "date": "2025-01-16",
+    "image": "/assets/img/project_card/kit-enquete.jpg",
+    "imageAlt": "",
+    "excerpt": "30/08/2025 : Le magazine de critique radicale et alternative Socialter parle de Feu Follet dans son numéro 71: \"La science-fiction fait sa révolution\" !",
+    "url": ""
+  }
+]
