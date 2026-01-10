@@ -133,9 +133,6 @@ body {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 1.2;
-  margin-bottom: calc(
-    var(--spacing-small) / 2
-  ); /* espace ajouté après les sous-titres */
 }
 
 /* Texte courant */
@@ -587,4 +584,12 @@ button,
   line-height: 1.4;
   color: var(--color-eau);
   text-decoration: underline;
+}
+
+.cta_link-black {
+  color: var(--color-noir);
+}
+
+.cta_link:hover {
+  text-decoration: none;
 }
