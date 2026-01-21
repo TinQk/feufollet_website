@@ -71,6 +71,12 @@
   margin-right: auto;
 }
 
+.max-width-1000px {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .max-width-1200px {
   max-width: 1200px;
   margin-left: auto;
@@ -84,6 +90,29 @@
 
 .bg-eau {
   background: var(--color-eau);
+}
+
+.bg-rouge {
+  background: var(--color-rouge);
+}
+
+/* BUTTON */
+.btn {
+  background: var(--color-jaune);
+  border: none;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-noir);
+  padding: var(--spacing-small) var(--spacing-med);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  opacity: 0.9;
 }
 
 /* ===============================
@@ -155,7 +184,7 @@ body {
   color: var(--color-noir);
 }
 
-/* 4. Texte secondaire / légendes / footer */
+/* Texte secondaire / légendes / footer */
 .type-catchy {
   font-family: var(--font-body);
   font-weight: 700;
@@ -425,7 +454,6 @@ button,
   padding-left: max(var(--spacing-small), var(--gutter));
   padding-right: max(var(--spacing-small), var(--gutter));
   text-align: center;
-  background-color: var(--color-vert);
 }
 
 /* =========================
@@ -463,10 +491,6 @@ button,
   height: auto;
 }
 
-.projects-intro {
-  background-color: var(--color-eau);
-}
-
 /* ---------- PROJECTS DESKTOP ---------- */
 
 @media (min-width: 1024px) {
@@ -487,14 +511,6 @@ button,
 /* =========================
         INTROS COLORS 
    ========================= */
-
-.news-intro {
-  background-color: var(--color-lilas);
-}
-
-.actions-intro {
-  background-color: var(--color-vert);
-}
 
 /* =========================
         DOMAINES ACTION
