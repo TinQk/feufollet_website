@@ -7,7 +7,7 @@
   --scale: 0.5; /* maquette deux fois plus grande que la realité */
   --spacing-small: calc(30px * var(--scale)); /* 15px */
   --spacing-med: calc(60px * var(--scale)); /* 30px */
-  --spacing-large: calc(120px * var(--scale)); /* 60px */
+  --spacing-large: calc(90px * var(--scale)); /* 60px */
   --gutter: 10vw; /* marge horizontale des pages avec les cartes projets */
 
   /* Polices */
