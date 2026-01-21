@@ -77,6 +77,15 @@
   margin-right: auto;
 }
 
+/* Background colors */
+.bg-vert {
+  background: var(--color-vert);
+}
+
+.bg-eau {
+  background: var(--color-eau);
+}
+
 /* ===============================
    SYSTÈME TYPOGRAPHIQUE
 ================================ */
@@ -572,7 +581,6 @@ button,
 
 .cta {
   width: 100%;
-  background: var(--color-vert); /* couleur placeholder */
   display: flex;
   flex-direction: column;
 }
@@ -582,7 +590,6 @@ button,
   font-weight: 700;
   font-size: 1.1rem;
   line-height: 1.4;
-  color: var(--color-eau);
   text-decoration: underline;
 }
 
@@ -592,4 +599,13 @@ button,
 
 .cta_link:hover {
   text-decoration: none;
+}
+
+/* Link colors based on background */
+.bg-vert .cta_link {
+  color: var(--color-eau);
+}
+
+.bg-eau .cta_link {
+  color: var(--color-vert);
 }
