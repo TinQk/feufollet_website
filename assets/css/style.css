@@ -5,6 +5,7 @@
 :root {
   /* Espacements */
   --scale: 0.5; /* maquette deux fois plus grande que la realité */
+  --spacing-xsmall: calc(16px * var(--scale)); /* 8px */
   --spacing-small: calc(30px * var(--scale)); /* 15px */
   --spacing-med: calc(60px * var(--scale)); /* 30px */
   --spacing-large: calc(90px * var(--scale)); /* 60px */
@@ -31,6 +32,9 @@
    UTILITAIRES
    ========================= */
 
+.spacing-xsmall {
+  height: var(--spacing-xsmall);
+}
 .spacing-small {
   height: var(--spacing-small);
 }
@@ -150,10 +154,18 @@ body {
   background-color: var(--color-beige);
 }
 
+.type-feufollet {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 1.4;
+  padding-top: 7px;
+}
+
 .type-hero {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   line-height: 1.1;
 }
 
@@ -161,7 +173,7 @@ body {
 .type-title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   line-height: 1.1;
 }
 
@@ -169,7 +181,7 @@ body {
 .type-subtitle {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 1.2;
 }
 
@@ -203,6 +215,13 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* ---------- ADAPTATIF ---------- */
+@media (min-width: 500px) {
+  .type-title {
+    font-size: 2.2rem;
+  }
 }
 
 /* =========================
@@ -240,11 +259,7 @@ button,
   justify-content: space-between; /* feu follet a gauche et burger a droite */
   align-items: center;
   position: relative;
-}
-
-.header-inner a {
   height: 50px; /* hauteur forcée pour match les icones */
-  padding-top: 10px; /* ajuste la position verticale du texte */
 }
 
 .menu-toggle {
@@ -286,7 +301,6 @@ button,
 
 /* Lien centré dans le bloc */
 .mobile-menu a {
-  padding-top: 8px;
   width: 100%;
 }
 
@@ -313,7 +327,7 @@ button,
 
 /* ---------- HEADER DESKTOP ---------- */
 
-@media (min-width: 1024px) {
+@media (min-width: 1120px) {
   /* On enlève le burger */
   .menu-toggle {
     display: none;
@@ -348,14 +362,15 @@ button,
   .mobile-menu ul {
     display: flex;
     align-items: stretch;
-    gap: var(--spacing-small);
+    gap: var(--spacing-med);
   }
 
   .mobile-menu li {
+    min-height: auto; /* on enlève la hauteur fixe */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-right: var(--spacing-small);
+    padding: 3px 7px;
   }
 
   .mobile-menu a {
@@ -363,7 +378,6 @@ button,
     display: flex;
     align-items: center;
     height: 100%;
-    padding-top: 6px;
   }
 }
 
@@ -373,11 +387,10 @@ button,
 
 /* ---------- FOOTER MOBILE ----------*/
 .footer-block {
-  padding: var(--spacing-small);
+  padding: var(--spacing-med) var(--spacing-small);
   /* alignement du texte au centre verticalement */
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .footer-block a {
@@ -449,8 +462,8 @@ button,
    ========================= */
 
 .intro {
-  padding-top: var(--spacing-small);
-  padding-bottom: var(--spacing-small);
+  padding-top: var(--spacing-med);
+  padding-bottom: var(--spacing-med);
   padding-left: max(var(--spacing-small), var(--gutter));
   padding-right: max(var(--spacing-small), var(--gutter));
   text-align: center;
@@ -464,8 +477,8 @@ button,
 .projects {
   padding-left: var(--spacing-small);
   padding-right: var(--spacing-small);
-  padding-top: var(--spacing-med);
-  padding-bottom: var(--spacing-med);
+  padding-top: var(--spacing-large);
+  padding-bottom: var(--spacing-large);
   width: min(100%, 480px);
 }
 
@@ -519,8 +532,8 @@ button,
 .container-chapeau {
   padding-left: var(--spacing-small);
   padding-right: var(--spacing-small);
-  padding-top: var(--spacing-med);
-  padding-bottom: var(--spacing-med);
+  padding-top: var(--spacing-large);
+  padding-bottom: var(--spacing-small);
   width: min(100%, 480px);
 }
 
@@ -537,10 +550,7 @@ button,
 
 .accordion {
   background-color: var(--color-jaune);
-  padding-left: var(--spacing-small);
-  padding-right: var(--spacing-small);
-  padding-top: var(--spacing-small);
-  padding-bottom: var(--spacing-small);
+  padding: calc(var(--spacing-small) + var(--spacing-xsmall));
 }
 
 .accordion__summary {
@@ -587,7 +597,7 @@ button,
   left: 0;
   right: 0;
   bottom: 0;
-  height: 2px;
+  height: 3px;
   background: var(--color-noir); /* ta barre noire */
 }
 
@@ -601,11 +611,11 @@ button,
   flex-direction: column;
 }
 
+.cta .type-subtitle {
+  font-size: 1.2rem;
+}
+
 .cta_link {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 1.1rem;
-  line-height: 1.4;
   text-decoration: underline;
 }
 
