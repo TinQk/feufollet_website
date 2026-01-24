@@ -1,6 +1,7 @@
 [
   {
     "title": "Enquête en Kit",
+    "order": 6,
     "date": "2025-01-16",
     "image": "/assets/img/project_card/kit-enquete.jpg",
     "imageAlt": "",
@@ -9,6 +10,7 @@
   },
   {
     "title": "Scientifiction",
+    "order": 4,
     "date": "2025-01-15",
     "image": "/assets/img/project_card/scientifiction.jpg",
     "imageAlt": "",
@@ -17,6 +19,7 @@
   },
   {
     "title": "Lille 2055 : Incertitude Radicale Extrême",
+    "order": 3,
     "date": "2025-01-14",
     "image": "/assets/img/project_card/lille-2055.jpg",
     "imageAlt": "",
@@ -25,6 +28,7 @@
   },
   {
     "title": "Têtes-en-l’air",
+    "order": 5,
     "date": "2025-01-14",
     "image": "/assets/img/project_card/tete-en-lair.jpg",
     "imageAlt": "",
@@ -33,6 +37,7 @@
   },
   {
     "title": "Des Noeuds et des Liens",
+    "order": 2,
     "date": "2025-01-14",
     "image": "/assets/img/project_card/des-noeuds.jpg",
     "imageAlt": "",
@@ -41,6 +46,7 @@
   },
   {
     "title": "Plan Climat Air Energie",
+    "order": 1,
     "date": "2025-01-14",
     "image": "/assets/img/project_card/pcaet.jpg",
     "imageAlt": "",

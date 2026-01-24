@@ -74,10 +74,8 @@ function renderAllProjects() {
   const container = document.getElementById("all-projects");
   if (!container) return; // on n'est pas sur la page projets
 
-  // On peut trier du plus récent au plus ancien
-  const sorted = [...PROJECTS].sort(
-    (a, b) => new Date(b.date) - new Date(a.date),
-  );
+  // Trier par ordre
+  const sorted = [...PROJECTS].sort((a, b) => b.order - a.order);
 
   sorted.forEach((project) => {
     container.insertAdjacentHTML("beforeend", createProjectCardHTML(project));
@@ -89,9 +87,7 @@ function renderLatestProjects(limit = 3) {
   const container = document.getElementById("latest-projects");
   if (!container) return; // on n'est pas sur la home
 
-  const sorted = [...PROJECTS].sort(
-    (a, b) => new Date(b.date) - new Date(a.date),
-  );
+  const sorted = [...PROJECTS].sort((a, b) => b.order - a.order);
   const latest = sorted.slice(0, limit);
 
   latest.forEach((project) => {
@@ -103,7 +99,7 @@ function renderLatestProjects(limit = 3) {
 function renderLatestNews(limit = 3) {
   const container = document.getElementById("latest-news");
   if (!container) return; // on n'est pas sur la home
-  const sorted = [...NEWS].sort((a, b) => new Date(b.date) - new Date(a.date));
+  const sorted = [...NEWS].sort((a, b) => b.order - a.order);
   const latest = sorted.slice(0, limit);
 
   latest.forEach((actu) => {
@@ -116,8 +112,8 @@ function renderAllNews() {
   const container = document.getElementById("all-news");
   if (!container) return; // on n'est pas sur la page actus
 
-  // On peut trier du plus récent au plus ancien
-  const sorted = [...NEWS].sort((a, b) => new Date(b.date) - new Date(a.date));
+  // Trier par ordre
+  const sorted = [...NEWS].sort((a, b) => b.order - a.order);
 
   sorted.forEach((actu) => {
     container.insertAdjacentHTML("beforeend", createNewsCardHTML(actu));
