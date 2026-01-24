@@ -169,6 +169,14 @@
   background: var(--color-rouge);
 }
 
+.bg-lilas {
+  background: var(--color-lilas);
+}
+
+.bg-jaune {
+  background: var(--color-jaune);
+}
+
 /* BUTTON */
 .btn {
   background: var(--color-jaune);
@@ -574,8 +582,25 @@ button,
   flex-direction: column;
 }
 
+.project-card a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card .btn {
+  margin-top: auto;
+  padding: var(--spacing-xsmall) var(--spacing-small);
+  align-self: flex-start;
+  background: var(--color-lilas);
+}
+
 .project-card-textzone {
   margin-top: var(--spacing-small);
+  margin-bottom: var(--spacing-xsmall);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
 .project-card-image {
@@ -592,8 +617,9 @@ button,
 @media (min-width: 1024px) {
   .projects-grid {
     grid-template-columns: 1fr 1fr 1fr;
-    gap: var(--spacing-small);
-    grid-auto-rows: 1fr; /* <-- makes cards in same row the same height */
+    grid-auto-rows: auto; /* <-- makes cards in same row the same height */
+    column-gap: var(--spacing-small);
+    row-gap: var(--spacing-med);
   }
   .latest-projects,
   .projects,

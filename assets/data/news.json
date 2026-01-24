@@ -1,38 +1,42 @@
 [
   {
-    "id": "actu-2",
+    "order": 2,
     "title": "Scientifiction <br>au Quai Des Savoirs",
     "date": "2025-01-16",
-    "image": "/assets/img/project_card/kit-enquete.jpg",
+    "image": "/assets/img/news_card/scientifiction.jpg",
     "imageAlt": "",
-    "excerpt": "05/11/2025 : On anime notre atelier Scientifiction au Quai des Savoirs à Toulouse lors du Forum des Futurs Désirables : collages, discussions collectives et exploration de nos avenirs communs.",
-    "url": ""
+    "excerpt": "En novembre, on anime notre atelier Scientifiction au Quai des Savoirs à Toulouse lors du Forum des Futurs Désirables : collages, discussions collectives et exploration de nos avenirs communs.",
+    "boutonText": "Découvrir l’atelier",
+    "url": "https://www.linkedin.com/posts/collectif-feu-follet-3a21b4331_fiction-cr%C3%A9ation-d%C3%A9bat-d%C3%A9but-activity-7396832217097981955-AiYd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFOANCoBW4tQEA2QgHVXDldyQ_BurGqsGgU"
   },
   {
-    "id": "actu-3",
-    "title": "Enquête en Kit est sur l'ADEM",
+    "order": 1,
+    "title": "Enquête en Kit est sur l’UVED",
     "date": "2025-01-16",
-    "image": "/assets/img/project_card/kit-enquete.jpg",
+    "image": "/assets/img/news_card/enquete-en-kit.jpg",
     "imageAlt": "",
-    "excerpt": "La mallette pédagogique Enquête en Kit co-créé dans le cadre du projet Renfo'RSE est visible et disponible sur le site de l'ADEM sous licence creative commons.",
-    "url": ""
+    "excerpt": "La mallette pédagogique Enquête en Kit co-créé dans le cadre du projet Renfo’RSE est visible et disponible sur le site de l’UVED sous licence creative commons.",
+    "boutonText": "Découvrir le kit",
+    "url": "https://moodle.uved.fr/mod/book/view.php?id=7630&chapterid=3950"
   },
   {
-    "id": "actu-4",
+    "order": 0,
     "title": "Dessiner la ville et la campagne",
     "date": "2025-01-16",
-    "image": "/assets/img/project_card/kit-enquete.jpg",
+    "image": "/assets/img/news_card/dessiner-ville-campagne.jpg",
     "imageAlt": "",
-    "excerpt": "Dessiner la ville et la campagne : paysages, animaux et bâtiments… Feu Follet, ce sont deux designers et artistes qui musclent régulièrement leurs crayons en créant leur propre résidence de dessin à Dijon",
+    "excerpt": "Paysages, animaux et bâtiments… Feu Follet, ce sont deux designers et artistes qui musclent régulièrement leurs crayons en créant leur propre résidence de dessin à Dijon.",
+    "boutonText": "Plonger dans la résidence",
     "url": ""
   },
   {
-    "id": "actu-5",
+    "order": -1,
     "title": "Socialter parle de nous",
     "date": "2025-01-16",
-    "image": "/assets/img/project_card/kit-enquete.jpg",
+    "image": "/assets/img/news_card/socialter.jpg",
     "imageAlt": "",
-    "excerpt": "30/08/2025 : Le magazine de critique radicale et alternative Socialter parle de Feu Follet dans son numéro 71: \"La science-fiction fait sa révolution\" !",
-    "url": ""
+    "excerpt": "Le magazine de critique radicale et alternative Socialter parle de Feu Follet dans son numéro 71: \"La science-fiction fait sa révolution\" !",
+    "boutonText": "Découvrir le numéro",
+    "url": "https://www.socialter.fr/produit/numero-71"
   }
 ]

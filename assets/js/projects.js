@@ -23,7 +23,7 @@ async function loadData() {
   }
 }
 
-// 2. Template d’une vignette projet/actu
+// 2a. Template d’une vignette projet
 function createProjectCardHTML(project) {
   return `
     <article class="project-card">
@@ -44,6 +44,31 @@ function createProjectCardHTML(project) {
   `;
 }
 
+// 2b. Template d’une vignette actu
+// (on peut réutiliser la même que pour les projets mais on ajoute un bouton dont le contenu est boutonText)
+function createNewsCardHTML(actu) {
+  return `
+    <article class="project-card">
+      <a href="${actu.url}" target="_blank" rel="noopener noreferrer">
+        <figure class="project-card-image">
+          <img src="${actu.image}" alt="${actu.imageAlt}">
+        </figure>
+
+        <div class="project-card-textzone">
+            <h3 class="type-subtitle">${actu.title}</h3>
+            <p class="type-body project-card-excerpt">
+            ${actu.excerpt}
+            </p>
+        </div>
+        <div class="btn btn-small btn-secondary">
+          ${actu.boutonText || "En savoir plus"}
+        </div>
+
+      </a>
+    </article>
+  `;
+}
+
 // 3a. Remplir la page "Nos projets" (tous les projets)
 function renderAllProjects() {
   const container = document.getElementById("all-projects");
@@ -51,7 +76,7 @@ function renderAllProjects() {
 
   // On peut trier du plus récent au plus ancien
   const sorted = [...PROJECTS].sort(
-    (a, b) => new Date(b.date) - new Date(a.date)
+    (a, b) => new Date(b.date) - new Date(a.date),
   );
 
   sorted.forEach((project) => {
@@ -65,7 +90,7 @@ function renderLatestProjects(limit = 3) {
   if (!container) return; // on n'est pas sur la home
 
   const sorted = [...PROJECTS].sort(
-    (a, b) => new Date(b.date) - new Date(a.date)
+    (a, b) => new Date(b.date) - new Date(a.date),
   );
   const latest = sorted.slice(0, limit);
 
@@ -82,7 +107,7 @@ function renderLatestNews(limit = 3) {
   const latest = sorted.slice(0, limit);
 
   latest.forEach((actu) => {
-    container.insertAdjacentHTML("beforeend", createProjectCardHTML(actu));
+    container.insertAdjacentHTML("beforeend", createNewsCardHTML(actu));
   });
 }
 
@@ -95,7 +120,7 @@ function renderAllNews() {
   const sorted = [...NEWS].sort((a, b) => new Date(b.date) - new Date(a.date));
 
   sorted.forEach((actu) => {
-    container.insertAdjacentHTML("beforeend", createProjectCardHTML(actu));
+    container.insertAdjacentHTML("beforeend", createNewsCardHTML(actu));
   });
 }
 
