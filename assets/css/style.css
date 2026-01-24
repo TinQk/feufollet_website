@@ -371,7 +371,17 @@ button,
 }
 
 .header-room {
-  height: 110px; /* pour laisser de la place au header en position absolue: 15 + 50 + 30 */
+  height: calc(
+    80px + var(--spacing-small)
+  ); /* pour laisser de la place au header en position absolue: 15 + 50 + 30 */
+}
+
+@media (min-width: 768px) {
+  .header-room {
+    height: calc(
+      80px + var(--spacing-large)
+    ); /* pour laisser de la place au header en position absolue: 15 + 70 + 30 */
+  }
 }
 
 /* Couleurs différentes par item (placeholder) */
