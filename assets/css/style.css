@@ -2,6 +2,10 @@
    VARIABLES GLOBALES
 ================================ */
 
+/* Points de rupture */
+/* 768px */
+/* 1024px */
+
 :root {
   /* Espacements */
   --scale: 0.5; /* maquette deux fois plus grande que la realité */
@@ -9,7 +13,6 @@
   --spacing-small: calc(30px * var(--scale)); /* 15px */
   --spacing-med: calc(60px * var(--scale)); /* 30px */
   --spacing-large: calc(90px * var(--scale)); /* 60px */
-  --gutter: 10vw; /* marge horizontale des pages avec les cartes projets */
 
   /* Polices */
   --font-display: "Basteleur", system-ui, sans-serif;
@@ -32,6 +35,72 @@
    UTILITAIRES
    ========================= */
 
+/* ---------- Marges ADAPTATIVES ---------- */
+
+/* mobile */
+.gutter {
+  padding-left: var(--spacing-small);
+  padding-right: var(--spacing-small);
+}
+
+.gutter-cards {
+  padding-left: var(--spacing-small);
+  padding-right: var(--spacing-small);
+}
+
+.gutter-actions,
+.gutter-actions-cta .cta {
+  padding-left: var(--spacing-small);
+  padding-right: var(--spacing-small);
+}
+
+.gutter-article,
+.gutter-article-cta .cta {
+  padding-left: var(--spacing-small);
+  padding-right: var(--spacing-small);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* tablette */
+@media (min-width: 768px) {
+  .gutter-article,
+  .gutter-article-cta .cta {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+  .gutter {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+  .gutter-cards {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+
+  .gutter-actions,
+  .gutter-actions-cta .cta {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+
+  .gutter-article,
+  .gutter-article-cta .cta {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ---------- Espacements ---------- */
 .spacing-xsmall {
   height: var(--spacing-xsmall);
 }
@@ -57,11 +126,6 @@
 .container-article {
   display: flex;
   flex-direction: column;
-}
-
-.gutter {
-  padding-left: max(var(--spacing-small), var(--gutter));
-  padding-right: max(var(--spacing-small), var(--gutter));
 }
 
 .margins-small-lr {
@@ -128,7 +192,8 @@
 /* Basteleur Bold */
 @font-face {
   font-family: "Basteleur";
-  src: url("/assets/fonts/Basteleur-Bold.woff2") format("woff2"),
+  src:
+    url("/assets/fonts/Basteleur-Bold.woff2") format("woff2"),
     url("/assets/fonts/Basteleur-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
@@ -138,7 +203,8 @@
 /* Basteleur Moonlight (la light) */
 @font-face {
   font-family: "Basteleur";
-  src: url("/assets/fonts/Basteleur-Moonlight.woff2") format("woff2"),
+  src:
+    url("/assets/fonts/Basteleur-Moonlight.woff2") format("woff2"),
     url("/assets/fonts/Basteleur-Moonlight.woff") format("woff");
   font-weight: 300;
   font-style: normal;
@@ -218,7 +284,7 @@ body {
 }
 
 /* ---------- ADAPTATIF ---------- */
-@media (min-width: 500px) {
+@media (min-width: 768px) {
   .type-title {
     font-size: 2.2rem;
   }
@@ -464,8 +530,6 @@ button,
 .intro {
   padding-top: var(--spacing-med);
   padding-bottom: var(--spacing-med);
-  padding-left: max(var(--spacing-small), var(--gutter));
-  padding-right: max(var(--spacing-small), var(--gutter));
   text-align: center;
 }
 
@@ -475,8 +539,6 @@ button,
 
 .latest-projects,
 .projects {
-  padding-left: var(--spacing-small);
-  padding-right: var(--spacing-small);
   padding-top: var(--spacing-large);
   padding-bottom: var(--spacing-large);
   width: min(100%, 480px);
@@ -504,6 +566,10 @@ button,
   height: auto;
 }
 
+.cta-slot.gutter-cards .cta {
+  width: 480px;
+}
+
 /* ---------- PROJECTS DESKTOP ---------- */
 
 @media (min-width: 1024px) {
@@ -512,37 +578,43 @@ button,
     gap: var(--spacing-small);
     grid-auto-rows: 1fr; /* <-- makes cards in same row the same height */
   }
-
+  .latest-projects,
   .projects,
-  .latest-projects {
+  .cta-slot.gutter-cards .cta {
     width: 100%;
-    padding-left: 10vw;
-    padding-right: 10vw;
   }
 }
-
-/* =========================
-        INTROS COLORS 
-   ========================= */
 
 /* =========================
         DOMAINES ACTION
    ========================= */
 
 .container-chapeau {
-  padding-left: var(--spacing-small);
-  padding-right: var(--spacing-small);
   padding-top: var(--spacing-large);
   padding-bottom: var(--spacing-small);
   width: min(100%, 480px);
 }
 
+.container-actions {
+  width: min(100%, 480px);
+}
+
+.cta-slot.gutter-actions .cta {
+  width: 480px;
+}
+
+@media (max-width: 480px) {
+  .container-actions {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 @media (min-width: 1024px) {
   .container-chapeau,
-  .container-actions {
+  .container-actions,
+  .cta-slot.gutter-actions .cta {
     width: 100%;
-    padding-left: 10vw;
-    padding-right: 10vw;
   }
 }
 
@@ -605,6 +677,11 @@ button,
    CTA – Call To Action
 ================================ */
 
+.cta-slot {
+  display: flex;
+  justify-content: center;
+}
+
 .cta {
   width: 100%;
   display: flex;
@@ -612,7 +689,7 @@ button,
 }
 
 .cta .type-subtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .cta_link {
