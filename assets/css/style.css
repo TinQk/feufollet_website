@@ -475,6 +475,10 @@ button,
    ========================= */
 
 /* ---------- FOOTER MOBILE ----------*/
+.site-footer {
+  margin-top: var(--spacing-large);
+}
+
 .footer-block {
   padding: var(--spacing-med) var(--spacing-small);
   /* alignement du texte au centre verticalement */
