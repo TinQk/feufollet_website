@@ -52,5 +52,14 @@
     "imageAlt": "",
     "excerpt": "Conception et animation d'une session de concertation territoriale sur la mise en œuvre d'un PCAET, avec la communauté de communes de Comtal-Lot et Truyère, Aveyron.",
     "url": "/projets/plan-climat-air-energie.html"
+  },
+  {
+    "title": "Accompagnement de l’IUT 2 de Grenoble",
+    "order": 7,
+    "date": "2025-01-14",
+    "image": "/assets/img/project_card/iut-2-grenoble.jpg",
+    "imageAlt": "",
+    "excerpt": "Faire entrer les enjeux de transition écologique dans les formations d’un IUT: une démarche collective pour imaginer, tester et créer de nouveaux outils pédagogiques adaptés aux réalités de terrain…",
+    "url": "/projets/accompagnement-iut-2-grenoble.html"
   }
 ]
