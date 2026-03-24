@@ -61,5 +61,14 @@
     "imageAlt": "",
     "excerpt": "Faire entrer les enjeux de transition écologique dans les formations d’un IUT: une démarche collective pour imaginer, tester et créer de nouveaux outils pédagogiques adaptés aux réalités de terrain…",
     "url": "/projets/accompagnement-iut-2-grenoble.html"
+  },
+  {
+    "title": "Le Chant des Betteraves",
+    "order": 8,
+    "date": "2025-01-14",
+    "image": "/assets/img/project_card/chant-bet.jpg",
+    "imageAlt": "",
+    "excerpt": "Une enquête artistique pour reconstituer la mémoire rurale de la Petite Beauce à travers archives familiales, entretiens avec les habitants et ateliers créatifs.",
+    "url": "/projets/chant-des-betteraves.html"
   }
 ]
